@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { artists } from "@/data/artists";
 import { getOpenSlots, createAppointment } from "@/lib/appointments";
+import { formatTime } from "@/lib/formatTime";
 
 export default function BookPage() {
   const [artistId, setArtistId] = useState(artists[0].id);
@@ -126,7 +127,7 @@ export default function BookPage() {
                       : "border-relic-gold/40 text-stone-100"
                   }`}
                 >
-                  {slot}
+                  {formatTime(slot)}
                 </button>
               ))}
             </div>
