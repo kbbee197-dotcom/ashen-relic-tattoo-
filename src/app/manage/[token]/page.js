@@ -9,6 +9,7 @@ import {
   getOpenSlots,
 } from "@/lib/appointments";
 import { artists } from "@/data/artists";
+import { formatTime } from "@/lib/formatTime";
 
 export default function ManagePage() {
   const { token } = useParams();
@@ -100,7 +101,7 @@ export default function ManagePage() {
           Artist: <span className="text-relic-gold">{artist?.name}</span>
         </p>
         <p className="text-stone-100 mb-2">Date: {appointment.date}</p>
-        <p className="text-stone-100 mb-2">Time: {appointment.time}</p>
+        <p className="text-stone-100 mb-2">Time: {formatTime(appointment.time)}</p>
         <p className="text-stone-100">
           Status:{" "}
           <span
@@ -156,7 +157,7 @@ export default function ManagePage() {
                       : "border-relic-gold/40 text-stone-100"
                   }`}
                 >
-                  {slot}
+                  {formatTime(slot)}
                 </button>
               ))}
             </div>
