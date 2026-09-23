@@ -1,26 +1,39 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: "Cinzel Decorative", serif;
+  --font-body: "Cinzel", serif;
+  --color-bone: #e8dfc8;
+  --color-relic-gold: #c9a86a;
+  --color-blood: #7a1f1f;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: #0a0a0a;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-bone);
+}
+
+.text-relic-gold {
+  color: var(--color-relic-gold);
+}
+
+.text-blood {
+  color: var(--color-blood);
+}
+
+.card-relic {
+  background-color: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(201, 168, 106, 0.3);
+  backdrop-filter: blur(2px);
 }
