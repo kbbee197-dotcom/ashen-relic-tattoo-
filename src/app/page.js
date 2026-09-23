@@ -11,17 +11,7 @@ const portfolioPreview = [
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 flex flex-col items-center text-center">
-      <div className="relative w-48 h-48 sm:w-64 sm:h-64 mb-6">
-        <Image
-          src="/images/logo.jpg"
-          alt="Ashen Relic Tattoo Studio & Art Gallery"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
-
-      <h1 className="text-3xl sm:text-5xl mb-4">
+<h1 className="text-3xl sm:text-5xl mb-4">
         Ashen Relic Tattoo Studio &amp; Art Gallery
       </h1>
       <p className="text-stone-100 text-lg max-w-xl mb-10">
