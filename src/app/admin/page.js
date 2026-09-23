@@ -7,6 +7,7 @@ import { auth } from "@/lib/firebase";
 import { getAllAppointments, cancelAppointment } from "@/lib/appointments";
 import { formatTime } from "@/lib/formatTime";
 import { artists } from "@/data/artists";
+import Link from "next/link";
 
 export default function AdminDashboard() {
   const [user, setUser] = useState(null);
@@ -55,12 +56,17 @@ export default function AdminDashboard() {
     <main className="max-w-4xl mx-auto px-4 py-16">
       <div className="flex justify-between items-center mb-10">
         <h1 className="text-3xl md:text-4xl">Admin Dashboard</h1>
-        <button
-          onClick={() => signOut(auth)}
-          className="text-relic-gold hover:underline"
-        >
-          Sign Out
-        </button>
+        <div className="flex gap-4 items-center">
+          <Link href="/admin/availability" className="text-relic-gold hover:underline">
+            Availability
+          </Link>
+          <button
+            onClick={() => signOut(auth)}
+            className="text-relic-gold hover:underline"
+          >
+            Sign Out
+          </button>
+        </div>
       </div>
 
       {loading && <p className="text-stone-100">Loading appointments...</p>}
