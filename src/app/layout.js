@@ -1,5 +1,6 @@
 import { Cinzel, Cinzel_Decorative } from "next/font/google";
 import BackgroundVideo from "@/components/BackgroundVideo";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         className={`${cinzel.variable} ${cinzelDecorative.variable} min-h-screen text-stone-100 antialiased`}
       >
         <BackgroundVideo />
+        <NavBar />
         <div className="relative z-0">{children}</div>
       </body>
     </html>
