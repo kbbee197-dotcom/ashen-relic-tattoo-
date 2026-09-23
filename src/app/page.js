@@ -24,12 +24,12 @@ export default function Home() {
       <h1 className="text-3xl sm:text-5xl mb-4">
         Ashen Relic Tattoo Studio &amp; Art Gallery
       </h1>
-      <p className="text-stone-300 max-w-xl mb-8">
+      <p className="text-stone-100 text-lg max-w-xl mb-10">
         Charleston, West Virginia's home for bold ink and dark artistry.
         Walk-ins welcome. Book your appointment online, anytime.
       </p>
 
-      <div className="flex flex-wrap gap-4 justify-center mb-16">
+      <div className="flex flex-wrap gap-4 justify-center mb-20">
         <Link
           href="/book"
           className="bg-relic-gold text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition"
@@ -44,17 +44,17 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="card-relic rounded-lg p-6 mb-16 max-w-md w-full">
+      <div className="card-relic rounded-lg p-8 mb-20 max-w-md w-full">
         <h2 className="text-2xl mb-3">Visit Us</h2>
-        <p className="text-stone-300">1829 Bigley Ave</p>
-        <p className="text-stone-300 mb-3">Charleston, WV 25302</p>
+        <p className="text-stone-100">1829 Bigley Ave</p>
+        <p className="text-stone-100 mb-4">Charleston, WV 25302</p>
         <p className="text-relic-gold font-semibold">(304) 768-6468</p>
-        <p className="text-stone-300 mb-3">tripleatatt@gmail.com</p>
-        <p className="text-stone-300">Wed - Sun, 11am - 10pm</p>
+        <p className="text-stone-100 mb-4">tripleatatt@gmail.com</p>
+        <p className="text-stone-100">Wed - Sun, 11am - 10pm</p>
       </div>
 
       <h2 className="text-2xl mb-6">Recent Work</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full mb-8 mt-2">
         {portfolioPreview.map((src) => (
           <div key={src} className="relative aspect-square rounded overflow-hidden">
             <Image src={src} alt="Tattoo work" fill className="object-cover" />
