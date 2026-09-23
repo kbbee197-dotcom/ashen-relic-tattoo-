@@ -103,3 +103,10 @@ export async function rescheduleAppointment(appointmentId, newDate, newTime) {
     time: newTime,
   });
 }
+
+export async function getAllAppointments() {
+  const snapshot = await getDocs(collection(db, "appointments"));
+  return snapshot.docs
+    .map((d) => ({ id: d.id, ...d.data() }))
+    .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+}
