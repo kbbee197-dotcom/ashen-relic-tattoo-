@@ -6,6 +6,7 @@ const links = [
   { href: "/flash", label: "Flash & Pricing" },
   { href: "/artists", label: "Artists" },
   { href: "/book", label: "Book Now" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function NavBar() {
@@ -19,12 +20,30 @@ export default function NavBar() {
           <Link
             key={link.href}
             href={link.href}
-            className="text-stone-300 hover:text-relic-gold transition"
+            className="text-stone-100 hover:text-relic-gold transition"
           >
             {link.label}
           </Link>
         ))}
       </nav>
+      <div className="flex items-center gap-4 text-sm">
+        <a
+          href="https://www.tiktok.com/@ashen.relic.tatto"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-stone-100 hover:text-relic-gold transition"
+        >
+          TikTok
+        </a>
+        <a
+          href="https://www.facebook.com/share/18M9iCkphS/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-stone-100 hover:text-relic-gold transition"
+        >
+          Facebook
+        </a>
+      </div>
     </header>
   );
 }
