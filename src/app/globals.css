@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --font-display: "Cinzel Decorative", serif;
-  --font-body: "Cinzel", serif;
+@theme inline {
   --color-bone: #e8dfc8;
   --color-relic-gold: #c9a86a;
   --color-blood: #7a1f1f;
+  --font-display: "Cinzel Decorative", serif;
+  --font-body: "Cinzel", serif;
 }
 
 body {
@@ -18,18 +18,6 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  color: var(--color-bone);
-}
-
-.text-relic-gold {
-  color: var(--color-relic-gold);
-}
-
-.text-blood {
-  color: var(--color-blood);
-}
-
-.text-bone {
   color: var(--color-bone);
 }
 

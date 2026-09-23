@@ -11,13 +11,13 @@ const portfolioPreview = [
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12 flex flex-col items-center text-center">
-      <h1 className="text-3xl sm:text-5xl mb-10">
+      <h1 className="text-3xl sm:text-5xl mb-14 mt-4">
         Ashen Relic Tattoo Studio &amp; Art Gallery
       </h1>
 
       <Link
         href="/book"
-        className="bg-relic-gold text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition mb-24"
+        className="bg-relic-gold text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition mb-32 sm:mb-40"
       >
         Book an Appointment
       </Link>
