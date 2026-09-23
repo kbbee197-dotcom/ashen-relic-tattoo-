@@ -17,7 +17,7 @@ export default function Home() {
 
       <Link
         href="/book"
-        className="bg-relic-gold text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition mb-32 sm:mb-40"
+        className="bg-relic-gold text-black font-semibold px-6 py-3 rounded hover:opacity-90 transition mb-56 sm:mb-72"
       >
         Book an Appointment
       </Link>
