@@ -9,12 +9,13 @@ import {
   updateDoc,
   Timestamp,
 } from "firebase/firestore";
-import { defaultAvailability, slotLengthMinutes } from "@/data/availability";
+import { slotLengthMinutes } from "@/data/availability";
+import { getArtistAvailability } from "@/lib/availability";
 
-function generateSlotsForDay(dateStr) {
+function generateSlotsForDay(dateStr, schedule) {
   const date = new Date(dateStr + "T00:00:00");
   const dayOfWeek = date.getDay();
-  const hours = defaultAvailability[dayOfWeek];
+  const hours = schedule[dayOfWeek];
   if (!hours) return [];
 
   const slots = [];
@@ -34,7 +35,8 @@ function generateSlotsForDay(dateStr) {
 }
 
 export async function getOpenSlots(artistId, dateStr) {
-  const allSlots = generateSlotsForDay(dateStr);
+  const schedule = await getArtistAvailability(artistId);
+  const allSlots = generateSlotsForDay(dateStr, schedule);
   if (allSlots.length === 0) return [];
 
   const q = query(
