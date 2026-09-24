@@ -1,6 +1,7 @@
 import { Cinzel, Cinzel_Decorative } from "next/font/google";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import NavBar from "@/components/NavBar";
+import ChatBubble from "@/components/ChatBubble";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <BackgroundVideo />
         <NavBar />
         <div className="relative z-0">{children}</div>
+        <ChatBubble />
       </body>
     </html>
   );
